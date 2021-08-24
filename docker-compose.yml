@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    container_name: ruas-mysql
+    volumes:
+      - ../:/app:z
+    environment:
+      - DB_USER=ruas
+      - DB_PASSWORD=123
+      - DB_HOST=127.0.0.1
+      - DB_PORT=3306
+      - DB_SCHEMA=ruas-backend
+    ports:
+      - "3306:3306"
