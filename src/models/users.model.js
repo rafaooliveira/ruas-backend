@@ -21,7 +21,7 @@ module.exports = function (app) {
       allowNull: false
 		},
 		idade: {
-			type: DataTypes.NUMBER,
+			type: DataTypes.STRING,
       allowNull: false
 		}
   
