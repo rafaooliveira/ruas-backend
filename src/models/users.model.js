@@ -58,16 +58,6 @@ module.exports = function (app) {
   users.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
-		users.belongsTo(models.artista, {
-      foreignKey: 'id',
-      as: 'id_usuario',
-			allowNull: false
-    });
-		users.belongsTo(models.promotor, {
-      foreignKey: 'id',
-      as: 'id_usuario',
-			allowNull: false
-    });
   };
 
   return users;

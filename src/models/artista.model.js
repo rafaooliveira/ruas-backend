@@ -6,7 +6,11 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const artista = sequelizeClient.define('artista', {
-  
+		userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: true
+    },
     vulgo: {
       type: DataTypes.STRING,
       allowNull: false
@@ -28,6 +32,11 @@ module.exports = function (app) {
   artista.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
+		artista.belongsTo(models.users, {
+      foreignKey: 'userId',
+      as: 'id_usuario',
+			allowNull: false
+    });
   };
 
   return artista;
