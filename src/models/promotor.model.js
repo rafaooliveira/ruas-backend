@@ -7,7 +7,7 @@ module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const promotor = sequelizeClient.define('promotor', {
 		
-		userId: {
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       unique: true
@@ -29,10 +29,10 @@ module.exports = function (app) {
   promotor.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
-		promotor.belongsTo(models.users, {
+    promotor.belongsTo(models.users, {
       foreignKey: 'userId',
       as: 'id_usuario',
-			allowNull: false
+      allowNull: false
     });
   };
 

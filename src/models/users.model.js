@@ -6,16 +6,16 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const users = sequelizeClient.define('users', {
-		id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       unique: true
     },
-		name: {
-			type: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false
-		},
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -25,26 +25,26 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
-		dtNascimento: {
-			type: DataTypes.DATE,
+    dtNascimento: {
+      type: DataTypes.DATE,
       allowNull: false
-		},
-		idade: {
-			type: DataTypes.NUMBER,
+    },
+    idade: {
+      type: DataTypes.NUMBER,
       allowNull: false
-		},
-		cpfCnpj: {
-			type: DataTypes.STRING,
+    },
+    cpfCnpj: {
+      type: DataTypes.STRING,
       allowNull: false
-		},
-		tipoUsuario: {
-			type: DataTypes.STRING,
+    },
+    tipoUsuario: {
+      type: DataTypes.STRING,
       allowNull: false
-		},
-		authGoogle: {
-			type: DataTypes.BOOLEAN,
+    },
+    authGoogle: {
+      type: DataTypes.BOOLEAN,
       allowNull: false
-		}
+    }
   
   }, {
     hooks: {

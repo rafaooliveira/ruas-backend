@@ -1,9 +1,11 @@
 // Initializes the `promotor` service on path `/promotor`
 const { Promotor } = require('./promotor.class');
+const createModel = require('../../models/promotor.model');
 const hooks = require('./promotor.hooks');
 
 module.exports = function (app) {
   const options = {
+    Model: createModel(app),
     paginate: app.get('paginate')
   };
 

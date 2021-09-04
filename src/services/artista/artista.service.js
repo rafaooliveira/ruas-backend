@@ -1,9 +1,11 @@
 // Initializes the `artista` service on path `/artista`
 const { Artista } = require('./artista.class');
+const createModel = require('../../models/artista.model');
 const hooks = require('./artista.hooks');
 
 module.exports = function (app) {
   const options = {
+    Model: createModel(app),
     paginate: app.get('paginate')
   };
 
