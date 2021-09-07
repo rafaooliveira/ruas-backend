@@ -1,11 +1,13 @@
-
+const gerarUser = require('../../hooks/gerarUser.js');
 
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [
+      gerarUser()
+    ],
     update: [],
     patch: [],
     remove: []

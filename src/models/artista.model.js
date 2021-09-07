@@ -34,8 +34,7 @@ module.exports = function (app) {
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
     artista.belongsTo(models.users, {
       foreignKey: 'userId',
-      as: 'id_usuario',
-      allowNull: false
+      as: 'id_usuario'
     });
   };
 

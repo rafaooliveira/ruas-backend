@@ -8,6 +8,7 @@ module.exports = function (app) {
   const users = sequelizeClient.define('users', {
     id: {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true,
       unique: true
