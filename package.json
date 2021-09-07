@@ -53,6 +53,7 @@
     "sequelize": "^6.6.5",
     "serve-favicon": "^2.5.0",
     "sqlite3": "^5.0.2",
+    "uuidv4": "^6.2.12",
     "winston": "^3.3.3"
   },
   "devDependencies": {
