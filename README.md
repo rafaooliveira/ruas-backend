@@ -14,14 +14,13 @@ Getting up and running is as easy as 1, 2, 3.
 2. Install your dependencies
 
     ```
-    cd path/to/ruas-backend
     npm install
     ```
 
 3. Start your app
 
     ```
-    npm start
+    npm run dev or npm install
     ```
 
 ## Testing
