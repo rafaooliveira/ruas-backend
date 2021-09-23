@@ -11,12 +11,11 @@ module.exports = function (app) {
   });
   
   try {
-	sequelize.authenticate();
-	logger.info("Loguei");
+    sequelize.authenticate();
+    logger.info('Loguei');
   } catch (e) {
-	logger.info("Erro", e)
+    logger.info('Erro', e);
   }
-  
   const oldSetup = app.setup;
 
   app.set('sequelizeClient', sequelize);
@@ -35,7 +34,7 @@ module.exports = function (app) {
     // Sync to the database
     app.set('sequelizeSync', sequelize.sync());
 
-	logger.info('[DB Backend] Connected')
+    logger.info('[DB Backend] Connected');
 
     return result;
   };

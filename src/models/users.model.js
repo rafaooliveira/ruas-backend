@@ -45,8 +45,19 @@ module.exports = function (app) {
     authGoogle: {
       type: DataTypes.BOOLEAN,
       allowNull: false
+    },
+    vulgo: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    avaliacao: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    agencia: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
-  
   }, {
     hooks: {
       beforeCount(options) {
@@ -59,14 +70,6 @@ module.exports = function (app) {
   users.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
-    users.hasOne(models.artista, {
-      as: 'artista',
-      foreignKey: 'fk_artista'
-    });
-    users.hasOne(models.promotor, {
-      as: 'promotor',
-      foreignKey: 'fk_promotor'
-    });
   };
 
   return users;
